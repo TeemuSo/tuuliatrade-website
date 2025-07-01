@@ -27,6 +27,26 @@ npm run dev
 ```bash
 npm run build
 ```
+we
+## Contact Form
+
+The contact form is set up to work with **Netlify Forms** automatically:
+
+- ✅ Form is ready to use - no setup required
+- 📧 Form submissions will appear in your Netlify dashboard
+- 🔐 Includes spam protection (honeypot field)
+- 🎯 Shows success message inline (no redirect needed)
+- 🧪 Works locally for testing (shows mock success)
+
+### Accessing Form Submissions
+
+1. Deploy your site to Netlify
+2. Go to your Netlify dashboard
+3. Click on your site
+4. Navigate to "Forms" tab
+5. View all form submissions there
+
+You can also set up email notifications in Netlify dashboard.
 
 ## Project Structure
 
