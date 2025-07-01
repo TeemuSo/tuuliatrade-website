@@ -1,20 +1,20 @@
 <!doctype html>
-<html lang="en">
+<html lang="fi">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>BUSINESS_NAME - BUSINESS_TAGLINE</title>
+    <title>Siivouspalvelu Tampere | Siivooja Tampere - TuuliaTrade</title>
     
     <!-- Tailwind CDN for development -->
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- SEO & Open Graph -->
-    <meta name="description" content="BUSINESS_DESCRIPTION" />
-    <meta name="keywords" content="BUSINESS_KEYWORDS" />
-    <meta property="og:title" content="BUSINESS_NAME - BUSINESS_TAGLINE" />
-    <meta property="og:description" content="BUSINESS_DESCRIPTION" />
+    <meta name="description" content="Siivouspalvelu Tampere - Luotettava siivooja Tampere alueella. TuuliaTrade tarjoaa yritys- ja kotisiivousta Tampereella jo vuodesta 2011." />
+    <meta name="keywords" content="siivouspalvelu tampere, siivooja tampere, yrityssiivous tampere, kotisiivous tampere, siivousfirma tampere" />
+    <meta property="og:title" content="TuuliaTrade - Luotettavaa yrityssiivousta" />
+    <meta property="og:description" content="Ammattitaitoista siivouspalvelua jo vuodesta 2011" />
     <meta property="og:type" content="website" />
-    <link rel="canonical" href="WEBSITE_URL" />
+    <link rel="canonical" href="https://www.tuuliatrade.com" />
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -25,13 +25,13 @@
         theme: {
           extend: {
             colors: {
-              // THEME COLORS - Customize your brand colors here
-              'brand': 'var(--color-brand)', // Primary brand color
-              'brand-light': 'var(--color-brand-light)', // Lighter brand variant
-              'brand-dark': 'var(--color-brand-dark)', // Darker brand variant
-              'accent': 'var(--color-accent)', // Secondary accent color
-              'accent-light': 'var(--color-accent-light)',
-              'accent-dark': 'var(--color-accent-dark)',
+              // THEME COLORS - Emerald green brand colors
+              'accent': '#10b981', // Primary emerald green
+              'accent-light': '#34d399', // Lighter emerald variant
+              'accent-dark': '#059669', // Darker emerald variant
+              'brand': '#10b981', // Keep brand as alias for compatibility
+              'brand-light': '#34d399',
+              'brand-dark': '#059669',
               // Neutral palette
               'neutral-25': '#fcfcfc',
               'neutral-50': '#fafafa',
@@ -70,10 +70,10 @@
     <style>
       /* CSS CUSTOM PROPERTIES - Easy theming system */
       :root {
-        /* BRAND COLORS - Change these to match your brand */
-        --color-brand: #2563eb; /* Blue primary */
-        --color-brand-light: #3b82f6;
-        --color-brand-dark: #1d4ed8;
+        /* BRAND COLORS - Emerald green theme */
+        --color-brand: #10b981; /* Emerald primary */
+        --color-brand-light: #34d399;
+        --color-brand-dark: #059669;
         --color-accent: #10b981; /* Emerald accent */
         --color-accent-light: #34d399;
         --color-accent-dark: #059669;
@@ -105,11 +105,11 @@
       }
       .hover-lift:hover {
         transform: translateY(-5px);
-        box-shadow: 0 20px 40px rgba(37, 99, 235, 0.1);
+        box-shadow: 0 20px 40px rgba(16, 185, 129, 0.1);
       }
       
       .hover-glow:hover {
-        box-shadow: 0 0 30px rgba(37, 99, 235, 0.15);
+        box-shadow: 0 0 30px rgba(16, 185, 129, 0.15);
       }
       
       /* Smooth benefit cards animation */
@@ -133,8 +133,8 @@
         background: linear-gradient(135deg, #fcfcfc 0%, #fafafa 50%, #f7f7f7 100%);
       }
       
-      .gradient-brand-subtle {
-        background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 50%, #bfdbfe 100%);
+      .gradient-accent-subtle {
+        background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 50%, #d1fae5 100%);
       }
       
       /* Loading shimmer effect */
@@ -157,11 +157,11 @@
         background: #f1f5f9;
       }
       ::-webkit-scrollbar-thumb {
-        background: var(--color-brand);
+        background: var(--color-accent);
         border-radius: 4px;
       }
       ::-webkit-scrollbar-thumb:hover {
-        background: var(--color-brand-dark);
+        background: var(--color-accent-dark);
       }
     </style>
   </head>
@@ -171,16 +171,15 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center py-6">
           <div class="flex items-center">
-            <h1 class="text-2xl font-semibold text-gray-900 tracking-tight font-heading">BUSINESS_NAME</h1>
+            <h1 class="text-2xl font-semibold text-gray-900 tracking-tight font-heading">TuuliaTrade</h1>
           </div>
           <nav class="hidden md:flex space-x-10">
-            <a href="#home" class="text-gray-600 hover:text-brand transition-colors font-medium">Home</a>
-            <a href="#about" class="text-gray-600 hover:text-brand transition-colors font-medium">About</a>
-            <a href="#services" class="text-gray-600 hover:text-brand transition-colors font-medium">Services</a>
-            <a href="#contact" class="text-gray-600 hover:text-brand transition-colors font-medium">Contact</a>
+            <a href="#etusivu" class="text-gray-600 hover:text-accent transition-colors font-medium">Etusivu</a>
+            <a href="#palvelut" class="text-gray-600 hover:text-accent transition-colors font-medium">Palvelut</a>
+            <a href="#yhteydenotto" class="text-gray-600 hover:text-accent transition-colors font-medium">Yhteydenotto</a>
           </nav>
           <!-- Mobile menu button -->
-          <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-neutral-100 transition-colors" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">
+          <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-neutral-100 transition-colors" onclick="toggleMobileMenu()" aria-label="Avaa mobile-valikko">
             <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
@@ -190,37 +189,36 @@
       <!-- Mobile menu -->
       <div id="mobile-menu" class="md:hidden hidden border-t border-gray-100 bg-white/95 backdrop-blur-md">
         <div class="px-4 py-4 space-y-2">
-          <a href="#home" class="block px-4 py-3 text-gray-600 hover:text-brand hover:bg-neutral-50 rounded-lg transition-colors font-medium">Home</a>
-          <a href="#about" class="block px-4 py-3 text-gray-600 hover:text-brand hover:bg-neutral-50 rounded-lg transition-colors font-medium">About</a>
-          <a href="#services" class="block px-4 py-3 text-gray-600 hover:text-brand hover:bg-neutral-50 rounded-lg transition-colors font-medium">Services</a>
-          <a href="#contact" class="block px-4 py-3 text-gray-600 hover:text-brand hover:bg-neutral-50 rounded-lg transition-colors font-medium">Contact</a>
+          <a href="#etusivu" class="block px-4 py-3 text-gray-600 hover:text-accent hover:bg-neutral-50 rounded-lg transition-colors font-medium">Etusivu</a>
+          <a href="#palvelut" class="block px-4 py-3 text-gray-600 hover:text-accent hover:bg-neutral-50 rounded-lg transition-colors font-medium">Palvelut</a>
+          <a href="#yhteydenotto" class="block px-4 py-3 text-gray-600 hover:text-accent hover:bg-neutral-50 rounded-lg transition-colors font-medium">Yhteydenotto</a>
         </div>
       </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="bg-neutral-50 py-32 md:py-48 lg:py-56">
+    <section id="etusivu" class="bg-neutral-50 py-32 md:py-48 lg:py-56">
       <div class="max-w-5xl mx-auto text-center px-4">
         <div class="mb-8">
           <h1 class="text-5xl md:text-7xl font-light text-gray-900 mb-6 tracking-tight leading-tight font-heading">
-            HERO_MAIN_TEXT<br>
-            <span class="text-brand font-medium">HERO_ACCENT_TEXT</span>
+            Siivouspalvelu<br>
+            <span class="text-accent font-medium">Tampere</span>
           </h1>
         </div>
         <div class="max-w-2xl mx-auto mb-12">
           <p class="text-xl md:text-2xl text-gray-600 mb-4 font-light leading-relaxed">
-            HERO_SUBTITLE
+            Luotettava siivooja Tampereen alueella jo vuodesta 2011
           </p>
           <p class="text-lg text-gray-500 font-light">
-            BUSINESS_NAME — HERO_DESCRIPTION
+            TuuliaTrade — ammattitaitoista yritys- ja kotisiivousta
           </p>
         </div>
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a href="#contact" class="bg-brand text-white px-10 py-4 rounded-lg font-semibold hover:bg-brand-dark transition-colors duration-300 shadow-md hover:shadow-xl border-2 border-brand hover:border-brand-dark">
-            PRIMARY_CTA_TEXT
+          <a href="#yhteydenotto" class="bg-accent text-white px-10 py-4 rounded-lg font-semibold hover:bg-accent-dark transition-colors duration-300 shadow-md hover:shadow-xl border-2 border-accent hover:border-accent-dark">
+            Pyydä tarjous
           </a>
-          <a href="#services" class="text-gray-600 hover:text-brand font-medium flex items-center group transition-colors border-2 border-gray-200 hover:border-brand/30 px-6 py-4 rounded-lg hover:bg-brand/5">
-            SECONDARY_CTA_TEXT
+          <a href="#palvelut" class="text-gray-600 hover:text-accent font-medium flex items-center group transition-colors border-2 border-gray-200 hover:border-accent/30 px-6 py-4 rounded-lg hover:bg-accent/5">
+            Tutustu palveluihin
             <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
             </svg>
@@ -230,19 +228,19 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 gradient-brand-subtle">
+    <section class="py-20 gradient-accent-subtle">
       <div class="max-w-6xl mx-auto px-4">
         <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-light mb-6 text-gray-900 font-heading">ABOUT_SECTION_TITLE</h2>
+          <h2 class="text-3xl md:text-4xl font-light mb-6 text-gray-900 font-heading">Miksi valita meidät?</h2>
           <div class="max-w-3xl mx-auto text-lg text-gray-700">
             <p class="mb-4">
-              ABOUT_PARAGRAPH_1
+              Ammattitaitoinen siivouspalvelu Tampereella. Huolehdimme asiakkaiden toimitiloista kuin omistamme ja teemme tarpeen mukaan "myös vähän yli".
             </p>
             <p class="mb-4 text-gray-700">
-              ABOUT_PARAGRAPH_2
+              Olemme saaneet kiitosta erinomaisesta työnjäljestä sekä mutkattomasta ja sujuvasta yhteistyöstä.
             </p>
-            <p class="text-xl font-semibold text-brand-dark">
-              ABOUT_HIGHLIGHT_TEXT
+            <p class="text-xl font-semibold text-accent-dark">
+              Kauttamme saat luotettavan ja huolellisen tekijän!
             </p>
           </div>
         </div>
@@ -250,128 +248,128 @@
         <div class="grid md:grid-cols-3 gap-8" id="benefits-grid">
           <div class="text-center bg-white p-8 rounded-2xl shadow-sm hover-lift benefit-card border border-gray-100">
             <div class="mb-6">
-              <div class="w-16 h-16 bg-brand/10 rounded-2xl flex items-center justify-center mx-auto">
-                <svg class="w-8 h-8 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto">
+                <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
               </div>
             </div>
-            <h3 class="text-xl font-semibold mb-3 text-gray-900 font-heading">BENEFIT_1_TITLE</h3>
-            <p class="text-gray-600 font-medium">BENEFIT_1_DESCRIPTION</p>
+            <h3 class="text-xl font-semibold mb-3 text-gray-900 font-heading">Luotettava</h3>
+            <p class="text-gray-600 font-medium">Palvelua vuodesta 2011</p>
           </div>
           <div class="text-center bg-white p-8 rounded-2xl shadow-sm hover-lift benefit-card border border-gray-100">
             <div class="mb-6">
-              <div class="w-16 h-16 bg-brand/10 rounded-2xl flex items-center justify-center mx-auto">
-                <svg class="w-8 h-8 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto">
+                <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
               </div>
             </div>
-            <h3 class="text-xl font-semibold mb-3 text-gray-900 font-heading">BENEFIT_2_TITLE</h3>
-            <p class="text-gray-600 font-medium">BENEFIT_2_DESCRIPTION</p>
-            <p class="text-sm text-gray-500 mt-2">BENEFIT_2_EXTRA</p>
+            <h3 class="text-xl font-semibold mb-3 text-gray-900 font-heading">Joustava</h3>
+            <p class="text-gray-600 font-medium">Siivous sopivaan aikaan</p>
+            <p class="text-sm text-gray-500 mt-2">Iltaisin ja viikonloppuisin</p>
           </div>
           <div class="text-center bg-white p-8 rounded-2xl shadow-sm hover-lift benefit-card border border-gray-100">
             <div class="mb-6">
-              <div class="w-16 h-16 bg-brand/10 rounded-2xl flex items-center justify-center mx-auto">
-                <svg class="w-8 h-8 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto">
+                <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
                 </svg>
               </div>
             </div>
-            <h3 class="text-xl font-semibold mb-3 text-gray-900 font-heading">BENEFIT_3_TITLE</h3>
-            <p class="text-gray-600 font-medium">BENEFIT_3_DESCRIPTION</p>
-            <p class="text-sm text-gray-500 mt-2">BENEFIT_3_EXTRA</p>
+            <h3 class="text-xl font-semibold mb-3 text-gray-900 font-heading">Pysyvä</h3>
+            <p class="text-gray-600 font-medium">Sama siivooja joka kerta</p>
+            <p class="text-sm text-gray-500 mt-2">Henkilökohtainen palvelu</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 gradient-neutral">
+    <section id="palvelut" class="py-20 gradient-neutral">
       <div class="max-w-6xl mx-auto px-4">
         <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-light mb-4 text-gray-900 font-heading">SERVICES_SECTION_TITLE</h2>
+          <h2 class="text-3xl md:text-4xl font-light mb-4 text-gray-900 font-heading">Siivouspalvelut Tampereella</h2>
           <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-            SERVICES_SECTION_SUBTITLE
+            Yrityssiivous Tampere ja kotisiivous - sama luotettava siivooja joka kerta.
           </p>
         </div>
         
         <div class="grid md:grid-cols-2 gap-8 mb-12">
           <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover-lift hover-glow transition-all duration-300">
             <div class="flex items-center mb-6">
-              <div class="w-12 h-12 bg-brand rounded-xl flex items-center justify-center mr-4">
+              <div class="w-12 h-12 bg-accent rounded-xl flex items-center justify-center mr-4">
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
                 </svg>
               </div>
-              <h3 class="text-2xl font-semibold text-gray-900 font-heading">SERVICE_1_TITLE</h3>
+              <h3 class="text-2xl font-semibold text-gray-900 font-heading">Yrityssiivous Tampere</h3>
             </div>
             <p class="text-gray-600 mb-6 text-lg">
-              SERVICE_1_DESCRIPTION
+              Toimistot, liiketilat - siivous iltaisin ja viikonloppuisin.
             </p>
             <ul class="text-gray-600 space-y-2 mb-6">
               <li class="flex items-center">
-                <div class="w-2 h-2 bg-brand rounded-full mr-3"></div>
-                SERVICE_1_FEATURE_1
+                <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                Sopimussiivoukset
               </li>
               <li class="flex items-center">
-                <div class="w-2 h-2 bg-brand rounded-full mr-3"></div>
-                SERVICE_1_FEATURE_2
+                <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                Kertasiivoukset
               </li>
               <li class="flex items-center">
-                <div class="w-2 h-2 bg-brand rounded-full mr-3"></div>
-                SERVICE_1_FEATURE_3
+                <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                Joustava aikataulu
               </li>
             </ul>
             <div class="border-t border-gray-200 pt-6">
-              <h4 class="font-semibold text-gray-800 mb-3">SERVICE_1_PRICING_TITLE:</h4>
+              <h4 class="font-semibold text-gray-800 mb-3">Hinnat:</h4>
               <div class="text-gray-600 space-y-2">
-                <p><strong>SERVICE_1_PRICE_1_LABEL:</strong> SERVICE_1_PRICE_1</p>
-                <p><strong>SERVICE_1_PRICE_2_LABEL:</strong> SERVICE_1_PRICE_2</p>
+                <p><strong>Arkisin:</strong> alk. 37€/h (alv 0%), 45,88€/h (alv 24%)</p>
+                <p><strong>Viikonloppuisin:</strong> alk. 46€/h (alv 0%), 57,04€/h (alv 24%)</p>
               </div>
             </div>
           </div>
           
           <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover-lift hover-glow transition-all duration-300">
             <div class="flex items-center mb-6">
-              <div class="w-12 h-12 bg-brand rounded-xl flex items-center justify-center mr-4">
+              <div class="w-12 h-12 bg-accent rounded-xl flex items-center justify-center mr-4">
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
                 </svg>
               </div>
-              <h3 class="text-2xl font-semibold text-gray-900 font-heading">SERVICE_2_TITLE</h3>
+              <h3 class="text-2xl font-semibold text-gray-900 font-heading">Kodinhoitotyöt</h3>
             </div>
             <p class="text-gray-600 mb-6 text-lg">
-              SERVICE_2_DESCRIPTION
+              Luotettavaa kotisiivousta yksityishenkilöille.
             </p>
             <ul class="text-gray-600 space-y-2 mb-6">
               <li class="flex items-center">
-                <div class="w-2 h-2 bg-brand rounded-full mr-3"></div>
-                SERVICE_2_FEATURE_1
+                <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                Säännöllinen siivous
               </li>
               <li class="flex items-center">
-                <div class="w-2 h-2 bg-brand rounded-full mr-3"></div>
-                SERVICE_2_FEATURE_2
+                <div class="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                Min. 2h / kerta
               </li>
             </ul>
             <div class="border-t border-gray-200 pt-6">
-              <h4 class="font-semibold text-gray-800 mb-3">SERVICE_2_PRICING_TITLE:</h4>
+              <h4 class="font-semibold text-gray-800 mb-3">Hinnat:</h4>
               <div class="text-gray-600 space-y-2">
-                <p><strong>SERVICE_2_PRICE_1</strong></p>
-                <p><strong>SERVICE_2_PRICE_2</strong></p>
+                <p><strong>Alk. 37€/h</strong> (sis. alv)</p>
+                <p><strong>Min. 2h / kerta</strong></p>
               </div>
             </div>
           </div>
         </div>
         
         <div class="bg-neutral-900 text-white p-10 rounded-3xl text-center">
-          <h3 class="text-2xl md:text-3xl font-light mb-6 font-heading">CTA_SECTION_TITLE</h3>
+          <h3 class="text-2xl md:text-3xl font-light mb-6 font-heading">Miksi valita TuuliaTrade?</h3>
           <p class="text-lg md:text-xl mb-8 opacity-90 font-light max-w-4xl mx-auto leading-relaxed">
-            CTA_SECTION_DESCRIPTION
+            Yksityisen siivousyrittäjän etuina on joustavuus – yrityksillä on usein tarkat aukioloajat joiden ulkopuolella siivouksen kuuluu tapahtua. Meille voit huoleti antaa avaimesi, huolehdimme puhtaanapidosta iltaisin ja viikonloppuisin.
           </p>
-          <a href="#contact" class="inline-block bg-brand text-white px-10 py-4 rounded-full font-medium hover:bg-brand-dark transition-all duration-300 hover:scale-105 text-lg">
-            CTA_BUTTON_TEXT
+          <a href="#yhteydenotto" class="inline-block bg-accent text-white px-10 py-4 rounded-full font-medium hover:bg-accent-dark transition-all duration-300 hover:scale-105 text-lg">
+            Aloita viikkosi puhtaalta pöydältä
           </a>
         </div>
       </div>
@@ -381,58 +379,58 @@
     <section class="py-20 bg-neutral-25">
       <div class="max-w-6xl mx-auto px-4 text-center">
         <div class="inline-flex items-center space-x-6 mb-10">
-          <div class="h-px bg-gradient-to-r from-transparent via-brand/30 to-transparent w-32"></div>
-          <div class="w-4 h-4 bg-brand rounded-full"></div>
-          <div class="h-px bg-gradient-to-r from-transparent via-brand/30 to-transparent w-32"></div>
+          <div class="h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent w-32"></div>
+          <div class="w-4 h-4 bg-accent rounded-full"></div>
+          <div class="h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent w-32"></div>
         </div>
         <h2 class="text-2xl md:text-3xl font-light text-gray-900 mb-6 font-heading">
-          DIVIDER_TITLE
+          Valmis aloittamaan?
         </h2>
         <p class="text-lg text-gray-600 max-w-xl mx-auto">
-          DIVIDER_SUBTITLE
+          Ota yhteyttä ja keskustellaan siivoustarpeistasi
         </p>
       </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-24 gradient-brand-subtle">
+    <section id="yhteydenotto" class="py-24 gradient-accent-subtle">
       <div class="max-w-4xl mx-auto px-4">
         <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-light mb-6 text-gray-900 font-heading">CONTACT_SECTION_TITLE</h2>
-          <p class="text-lg text-gray-600">CONTACT_SECTION_SUBTITLE</p>
+          <h2 class="text-3xl md:text-4xl font-light mb-6 text-gray-900 font-heading">Ota yhteyttä</h2>
+          <p class="text-lg text-gray-600">Pyydä tarjous siivouspalveluistamme</p>
         </div>
         
         <div class="bg-white p-10 rounded-3xl shadow-lg border border-gray-100">
           <form action="https://formspree.io/f/FORMSPREE_ID" method="POST" class="space-y-8">
             <div class="grid md:grid-cols-2 gap-8">
               <div>
-                <label for="name" class="block text-sm font-medium text-gray-700 mb-3">FORM_NAME_LABEL *</label>
-                <input type="text" id="name" name="name" required class="w-full px-4 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-colors">
+                <label for="nimi" class="block text-sm font-medium text-gray-700 mb-3">Nimi *</label>
+                <input type="text" id="nimi" name="nimi" required class="w-full px-4 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-colors">
               </div>
               <div>
-                <label for="email" class="block text-sm font-medium text-gray-700 mb-3">FORM_EMAIL_LABEL *</label>
-                <input type="email" id="email" name="email" required class="w-full px-4 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-colors">
+                <label for="sahkoposti" class="block text-sm font-medium text-gray-700 mb-3">Sähköposti *</label>
+                <input type="email" id="sahkoposti" name="sahkoposti" required class="w-full px-4 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-colors">
               </div>
             </div>
             
             <div>
-              <label for="service" class="block text-sm font-medium text-gray-700 mb-3">FORM_SERVICE_LABEL</label>
-              <select id="service" name="service" class="w-full px-4 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-colors">
-                <option value="">FORM_SERVICE_PLACEHOLDER</option>
-                <option value="service1">SERVICE_OPTION_1</option>
-                <option value="service2">SERVICE_OPTION_2</option>
-                <option value="service3">SERVICE_OPTION_3</option>
+              <label for="palvelu" class="block text-sm font-medium text-gray-700 mb-3">Kiinnostava palvelu</label>
+              <select id="palvelu" name="palvelu" class="w-full px-4 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-colors">
+                <option value="">Valitse palvelu...</option>
+                <option value="yrityssiivous">Yrityssiivous</option>
+                <option value="kodinhoitotyot">Kodinhoitotyöt</option>
+                <option value="kertasiivous">Kertasiivous</option>
               </select>
             </div>
             
             <div>
-              <label for="message" class="block text-sm font-medium text-gray-700 mb-3">FORM_MESSAGE_LABEL *</label>
-              <textarea id="message" name="message" rows="6" required class="w-full px-4 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-colors" placeholder="FORM_MESSAGE_PLACEHOLDER"></textarea>
+              <label for="viesti" class="block text-sm font-medium text-gray-700 mb-3">Viesti *</label>
+              <textarea id="viesti" name="viesti" rows="6" required class="w-full px-4 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-colors" placeholder="Kerro meille siivoustarpeistasi..."></textarea>
             </div>
             
             <div class="text-center">
-              <button type="submit" class="bg-neutral-900 text-white px-10 py-4 rounded-full font-medium hover:bg-neutral-850 focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 transition-all duration-300 hover:scale-105 text-lg">
-                FORM_SUBMIT_BUTTON
+              <button type="submit" class="bg-neutral-900 text-white px-10 py-4 rounded-full font-medium hover:bg-neutral-850 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 transition-all duration-300 hover:scale-105 text-lg">
+                Lähetä viesti
               </button>
             </div>
           </form>
@@ -445,44 +443,40 @@
       <div class="max-w-6xl mx-auto px-4">
         <div class="grid md:grid-cols-3 gap-10">
           <div>
-            <h3 class="text-2xl font-semibold mb-6 font-heading">BUSINESS_NAME</h3>
-            <p class="text-gray-300 mb-6 leading-relaxed">FOOTER_DESCRIPTION</p>
-            <p class="text-sm text-gray-400">FOOTER_TAGLINE</p>
+            <h3 class="text-2xl font-semibold mb-6 font-heading">TuuliaTrade</h3>
+            <p class="text-gray-300 mb-6 leading-relaxed">Siivouspalvelu Tampere - luotettava siivooja Tampere alueella vuodesta 2011.</p>
+            <p class="text-sm text-gray-400">Ammattitaitoista siivouspalvelua</p>
           </div>
           <div>
-            <h4 class="text-lg font-semibold mb-6">FOOTER_SERVICES_TITLE</h4>
+            <h4 class="text-lg font-semibold mb-6">Palvelumme</h4>
             <ul class="space-y-3 text-gray-300">
-              <li><a href="#services" class="hover:text-brand transition-colors">FOOTER_SERVICE_1</a></li>
-              <li><a href="#services" class="hover:text-brand transition-colors">FOOTER_SERVICE_2</a></li>
-              <li><a href="#services" class="hover:text-brand transition-colors">FOOTER_SERVICE_3</a></li>
-              <li><a href="#services" class="hover:text-brand transition-colors">FOOTER_SERVICE_4</a></li>
+              <li><a href="#palvelut" class="hover:text-accent transition-colors">Yrityssiivous</a></li>
+              <li><a href="#palvelut" class="hover:text-accent transition-colors">Kodinhoitotyöt</a></li>
+              <li><a href="#palvelut" class="hover:text-accent transition-colors">Sopimussiivoukset</a></li>
+              <li><a href="#palvelut" class="hover:text-accent transition-colors">Kertasiivoukset</a></li>
             </ul>
           </div>
           <div>
-            <h4 class="text-lg font-semibold mb-6">FOOTER_CONTACT_TITLE</h4>
+            <h4 class="text-lg font-semibold mb-6">Ota yhteyttä</h4>
             <div class="space-y-3 text-gray-300">
               <p class="flex items-center">
-                <span class="text-brand mr-3">📧</span>
-                CONTACT_EMAIL
+                <span class="text-accent mr-3">📧</span>
+                info@tuuliatrade.com
               </p>
               <p class="flex items-center">
-                <span class="text-brand mr-3">📞</span>
-                CONTACT_PHONE
-              </p>
-              <p class="flex items-center">
-                <span class="text-brand mr-3">🌐</span>
-                CONTACT_WEBSITE
+                <span class="text-accent mr-3">🌐</span>
+                www.tuuliatrade.com
               </p>
               <p class="flex items-center text-sm">
-                <span class="text-brand mr-3">📍</span>
-                CONTACT_ADDRESS
+                <span class="text-accent mr-3">📍</span>
+                Tampere ja lähialueet
               </p>
             </div>
           </div>
         </div>
         <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 BUSINESS_NAME. All rights reserved.</p>
-          <p class="text-sm mt-2">FOOTER_COPYRIGHT_TEXT</p>
+          <p>&copy; 2024 TuuliaTrade. Kaikki oikeudet pidätetään.</p>
+          <p class="text-sm mt-2">Luotettavaa siivouspalvelua jo vuodesta 2011</p>
         </div>
       </div>
     </footer>
@@ -553,7 +547,7 @@
               <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
               <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
             </svg>
-            Loading...
+            Lähetetään...
           </div>
         `;
         button.disabled = true;
